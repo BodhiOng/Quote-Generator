@@ -13,8 +13,11 @@ document.addEventListener("DOMContentLoaded", function() {
         var newImgSrc = "https://picsum.photos/" + screenWidth + "/" + imgHeight;
         
         preloadImage(newImgSrc, function() {
-            img.src = newImgSrc;
-            img.classList.add('loaded');
+            img.classList.remove('loaded');
+            setTimeout(function() {
+                img.src = newImgSrc;
+                img.classList.add('loaded');
+            }, 1000);
         });
     }
 
@@ -24,7 +27,6 @@ document.addEventListener("DOMContentLoaded", function() {
         preImg.src = src;
     }
 
-    // Debounce function to limit the rate at which setImageHeight is called
     function debounce(func, wait) {
         let timeout;
         return function() {
@@ -34,7 +36,6 @@ document.addEventListener("DOMContentLoaded", function() {
         };
     }
 
-    // Use the debounced version of setImageHeight for the resize event
     var debouncedSetImageHeight = debounce(setImageHeight, 200);
 
     setImageHeight();
