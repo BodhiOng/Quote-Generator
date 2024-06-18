@@ -25,6 +25,10 @@ body, html {
 
 .footer {
     height: 10vh;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 0 2rem;
 }
 
 .header-text, .footer-text {
@@ -125,4 +129,52 @@ body, html {
     padding: 0.5rem;
     letter-spacing: 0.05em; 
     max-width: 100%;
+}
+
+.link-primary {
+    display: block;
+    text-align: center;
+    color: white;
+
+}
+
+.share-socmed {
+    display: flex;
+    align-items: center;
+}
+
+.share-socmed a {
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    line-height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    color: white;
+    background: #125688;
+    text-decoration: none;
+}
+
+.share-socmed a:hover {
+    text-decoration: none;
+}
+
+.share-socmed a.fa-facebook {
+    background: #3B5998;
+}
+
+.share-socmed a.fa-twitter {
+    background: #55ACEE;
+}
+
+.footer .btn {
+    height: 50px; 
+    width: 300px;
+    background-color: rgb(0, 128, 128);
+    color: white;
+    justify-content: center; 
+    align-items: center;
+    margin-right: 20px;
 }
