@@ -24,10 +24,22 @@ document.addEventListener("DOMContentLoaded", function() {
         preImg.src = src;
     }
 
-    setImageHeight();
-    window.addEventListener('resize', setImageHeight);
-});
+    // Debounce function to limit the rate at which setImageHeight is called
+    function debounce(func, wait) {
+        let timeout;
+        return function() {
+            const context = this, args = arguments;
+            clearTimeout(timeout);
+            timeout = setTimeout(() => func.apply(context, args), wait);
+        };
+    }
 
+    // Use the debounced version of setImageHeight for the resize event
+    var debouncedSetImageHeight = debounce(setImageHeight, 200);
+
+    setImageHeight();
+    window.addEventListener('resize', debouncedSetImageHeight);
+});
 
 // $(document).ready(function() {
 //     var category = 'happiness';
