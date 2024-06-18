@@ -16,6 +16,7 @@ body, html {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    width: 100%;
 }
 
 .header {
@@ -29,6 +30,7 @@ body, html {
     justify-content: space-between; 
     align-items: center; 
     padding: 0 2rem;
+    width: 100%;
 }
 
 .header-text, .footer-text {
@@ -100,12 +102,26 @@ body, html {
         font-size: 1.25rem;
         padding: 0.75rem;
     }
+
+    .share-socmed a {
+        font-size: 20px; 
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+    }
 }
 
 @media (max-width: 480px) {
     .text-overlay {
         font-size: 1rem;
         padding: 0.5rem;
+    }
+
+    .share-socmed a {
+        font-size: 18px; 
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
     }
 }
 
@@ -151,30 +167,69 @@ body, html {
     line-height: 48px;
     border-radius: 50%;
     display: inline-block;
-    margin: 0 5px;
+    margin: 0 10px;
     color: white;
     background: #125688;
     text-decoration: none;
+    transition: background-color 0.3s ease; 
 }
 
 .share-socmed a:hover {
-    text-decoration: none;
+    background-color: #0d4366;
+}
+
+.share-socmed a.fa-instagram:hover {
+    background-color: #0d4366;
 }
 
 .share-socmed a.fa-facebook {
     background: #3B5998;
 }
 
+.share-socmed a.fa-facebook:hover {
+    background-color: #0d4366;
+}
+
 .share-socmed a.fa-twitter {
     background: #55ACEE;
 }
 
+.share-socmed a.fa-twitter:hover {
+    background-color: #0d4366;
+}
+
 .footer .btn {
     height: 50px; 
-    width: 300px;
     background-color: rgb(0, 128, 128);
     color: white;
-    justify-content: center; 
+    border: none;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    text-decoration: none; 
+    transition: background-color 0.3s ease; 
     margin-right: 20px;
+}
+
+.footer .btn:hover {
+    background-color: #0d4366;
+}
+
+.footer .btn:active {
+    background-color: rgba(0, 128, 128, 0.517); 
+}
+
+.link-to-about-dev {
+    display: flex;
+    align-items: center;
+}
+
+.link-light {
+    color: white;
+    text-decoration: none;
+}
+
+.link-light:hover {
+    text-decoration: underline;
 }
