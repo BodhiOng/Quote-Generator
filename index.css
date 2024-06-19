@@ -97,31 +97,78 @@ body, html {
     width: 80%;
 }
 
-@media (max-width: 768px) {
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
     .text-overlay {
-        font-size: 1.25rem;
+        font-size: 0.875rem; /* Smaller font size for very small devices */
+        padding: 0.5rem;
+    }
+
+    .share-socmed a {
+        font-size: 16px; /* Smaller icon size for very small devices */
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+    }
+}
+
+/* Small devices (portrait phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .text-overlay {
+        font-size: 1rem;
         padding: 0.75rem;
     }
 
     .share-socmed a {
-        font-size: 20px; 
+        font-size: 18px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .text-overlay {
+        font-size: 1.25rem;
+        padding: 1rem;
+    }
+
+    .share-socmed a {
+        font-size: 20px;
         width: 40px;
         height: 40px;
         line-height: 40px;
     }
 }
 
-@media (max-width: 480px) {
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
     .text-overlay {
-        font-size: 1rem;
+        font-size: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .share-socmed a {
+        font-size: 22px;
+        width: 44px;
+        height: 44px;
+        line-height: 44px;
+    }
+}
+
+/* iPhone SE and similar devices (375px width) */
+@media (max-width: 375px) {
+    .text-overlay {
+        font-size: 0.75rem; /* Smaller font size for very small devices */
         padding: 0.5rem;
     }
 
     .share-socmed a {
-        font-size: 18px; 
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
+        font-size: 14px; /* Smaller icon size for very small devices */
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
     }
 }
 
@@ -178,8 +225,12 @@ body, html {
     background-color: #0d4366;
 }
 
+.share-socmed a.fa-instagram {
+    background: #d62976;
+}
+
 .share-socmed a.fa-instagram:hover {
-    background-color: #0d4366;
+    background-color: #a01c58;
 }
 
 .share-socmed a.fa-facebook {
@@ -198,26 +249,27 @@ body, html {
     background-color: #0d4366;
 }
 
-.footer .btn {
-    height: 50px; 
-    background-color: rgb(0, 128, 128);
-    color: white;
+.custom-btn {
+    background-color: rgb(0, 128, 128); 
     border: none;
     border-radius: 25px;
+    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-decoration: none; 
-    transition: background-color 0.3s ease; 
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    height: 50px;
     margin-right: 20px;
 }
 
-.footer .btn:hover {
-    background-color: #0d4366;
+.custom-btn:hover {
+    background-color: #008b8b;
+    color: white;
 }
 
-.footer .btn:active {
-    background-color: rgba(0, 128, 128, 0.517); 
+.custom-btn:active {
+    background-color: #48d1cc; 
 }
 
 .link-to-about-dev {
