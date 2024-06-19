@@ -20,17 +20,19 @@ body, html {
 }
 
 .header {
-    height: 10vh;
+    height: auto;
     font-size: 2.5rem;
 }
 
 .footer {
-    height: 10vh;
+    height: auto;
     display: flex;
     justify-content: space-between; 
     align-items: center; 
     padding: 0 2rem;
     width: 100%;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .header-text, .footer-text {
@@ -97,22 +99,26 @@ body, html {
     width: 80%;
 }
 
-/* Extra small devices (phones, less than 576px) */
 @media (max-width: 575.98px) {
     .text-overlay {
-        font-size: 0.875rem; /* Smaller font size for very small devices */
+        font-size: 0.875rem; 
         padding: 0.5rem;
     }
 
     .share-socmed a {
-        font-size: 16px; /* Smaller icon size for very small devices */
+        font-size: 16px; 
         width: 32px;
         height: 32px;
         line-height: 32px;
     }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
-/* Small devices (portrait phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .text-overlay {
         font-size: 1rem;
@@ -125,10 +131,16 @@ body, html {
         height: 36px;
         line-height: 36px;
     }
+
+    /* .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    } */
 }
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) and (max-width: 991.98px) 
+{
     .text-overlay {
         font-size: 1.25rem;
         padding: 1rem;
@@ -142,7 +154,6 @@ body, html {
     }
 }
 
-/* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
     .text-overlay {
         font-size: 1.5rem;
@@ -157,18 +168,23 @@ body, html {
     }
 }
 
-/* iPhone SE and similar devices (375px width) */
 @media (max-width: 375px) {
     .text-overlay {
-        font-size: 0.75rem; /* Smaller font size for very small devices */
+        font-size: 0.75rem; 
         padding: 0.5rem;
     }
 
     .share-socmed a {
-        font-size: 14px; /* Smaller icon size for very small devices */
+        font-size: 14px;
         width: 28px;
         height: 28px;
         line-height: 28px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 }
 
@@ -214,7 +230,7 @@ body, html {
     line-height: 48px;
     border-radius: 50%;
     display: inline-block;
-    margin: 0 10px;
+    margin: 10px;
     color: white;
     background: #125688;
     text-decoration: none;
@@ -259,8 +275,8 @@ body, html {
     align-items: center;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    height: 50px;
-    margin-right: 20px;
+    height: 40px;
+    margin: 10px 20px;
 }
 
 .custom-btn:hover {
