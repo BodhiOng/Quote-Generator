@@ -40,9 +40,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     setImageHeight();
     window.addEventListener('resize', debouncedSetImageHeight);
-});
 
-$(document).ready(function() {
     function fetchAndDisplayQuote() {
         const categories = [
             "age", "alone", "amazing", "anger", "architecture", "art", "attitude", "beauty", "best",

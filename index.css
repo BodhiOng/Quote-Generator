@@ -105,13 +105,6 @@ body, html {
         padding: 0.5rem;
     }
 
-    .share-socmed a {
-        font-size: 16px; 
-        width: 32px;
-        height: 32px;
-        line-height: 32px;
-    }
-
     .footer {
         flex-direction: column;
         align-items: center;
@@ -124,19 +117,6 @@ body, html {
         font-size: 1rem;
         padding: 0.75rem;
     }
-
-    .share-socmed a {
-        font-size: 18px;
-        width: 36px;
-        height: 36px;
-        line-height: 36px;
-    }
-
-    /* .footer {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    } */
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) 
@@ -145,13 +125,6 @@ body, html {
         font-size: 1.25rem;
         padding: 1rem;
     }
-
-    .share-socmed a {
-        font-size: 20px;
-        width: 40px;
-        height: 40px;
-        line-height: 40px;
-    }
 }
 
 @media (min-width: 992px) {
@@ -159,26 +132,12 @@ body, html {
         font-size: 1.5rem;
         padding: 1.25rem;
     }
-
-    .share-socmed a {
-        font-size: 22px;
-        width: 44px;
-        height: 44px;
-        line-height: 44px;
-    }
 }
 
 @media (max-width: 375px) {
     .text-overlay {
         font-size: 0.75rem; 
         padding: 0.5rem;
-    }
-
-    .share-socmed a {
-        font-size: 14px;
-        width: 28px;
-        height: 28px;
-        line-height: 28px;
     }
 
     .footer {
@@ -215,54 +174,6 @@ body, html {
     text-align: center;
     color: white;
 
-}
-
-.share-socmed {
-    display: flex;
-    align-items: center;
-}
-
-.share-socmed a {
-    font-size: 24px;
-    width: 48px;
-    height: 48px;
-    text-align: center;
-    line-height: 48px;
-    border-radius: 50%;
-    display: inline-block;
-    margin: 10px;
-    color: white;
-    background: #125688;
-    text-decoration: none;
-    transition: background-color 0.3s ease; 
-}
-
-.share-socmed a:hover {
-    background-color: #0d4366;
-}
-
-.share-socmed a.fa-instagram {
-    background: #d62976;
-}
-
-.share-socmed a.fa-instagram:hover {
-    background-color: #a01c58;
-}
-
-.share-socmed a.fa-facebook {
-    background: #3B5998;
-}
-
-.share-socmed a.fa-facebook:hover {
-    background-color: #0d4366;
-}
-
-.share-socmed a.fa-twitter {
-    background: #55ACEE;
-}
-
-.share-socmed a.fa-twitter:hover {
-    background-color: #0d4366;
 }
 
 .custom-btn {
