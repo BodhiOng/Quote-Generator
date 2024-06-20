@@ -13,5 +13,5 @@ This project is a simple Quote Generator that fetches and displays quotes based 
 Check out the live demo of the project here: [Quote Generator](https://bodhiong.github.io/Quote-Generator/)
 
 ## Usage
-- On defautl, a quote would be loaded to be displayed on the user's end.
+- On default, a quote would be loaded to be displayed on the user's end.
 - Click on the "Generate Quote" button to fetch and display a new quote.
