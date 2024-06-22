@@ -1,6 +1,6 @@
 # Quote Generator
 
-This project is a front-end based (HTML, CSS, Bootstrap, Javascript, DOM Manipulation) simple Quote Generator that fetches and displays quotes based on various categories.
+This project is a front-end based (HTML, CSS, Bootstrap, Javascript, DOM Manipulation) simple quote generator that fetches and displays quotes based on various categories.
 
 ## Features
 
