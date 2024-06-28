@@ -169,13 +169,6 @@ body, html {
     max-width: 100%;
 }
 
-.link-primary {
-    display: block;
-    text-align: center;
-    color: white;
-
-}
-
 .custom-btn {
     background-color: rgb(0, 128, 128); 
     border: none;
