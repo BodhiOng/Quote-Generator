@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
     var img = document.getElementById("dynamicImage");
 
+    // Function to set the image height based on the viewport and header/footer height
     function setImageHeight() {
         var screenHeight = window.innerHeight;
         var headerHeight = document.querySelector('.header').offsetHeight;
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         var screenWidth = window.innerWidth;
         var newImgSrc = "https://picsum.photos/" + screenWidth + "/" + imgHeight;
         
+        // Preload the image before displaying it
         preloadImage(newImgSrc, function() {
             img.classList.remove('loaded');
             setTimeout(function() {
@@ -21,12 +23,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Preload image function
     function preloadImage(src, callback) {
         var preImg = new Image();
         preImg.onload = callback;
         preImg.src = src;
     }
 
+    // Debounce function to limit the rate of function execution
     function debounce(func, wait) {
         let timeout;
         return function() {
@@ -38,9 +42,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var debouncedSetImageHeight = debounce(setImageHeight, 200);
 
+    // Set initial image height and add event listener for window resize
     setImageHeight();
     window.addEventListener('resize', debouncedSetImageHeight);
 
+    // Function to fetch and display a random quote
     function fetchAndDisplayQuote() {
         const categories = [
             "age", "alone", "amazing", "anger", "architecture", "art", "attitude", "beauty", "best",
@@ -54,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "morning", "movies", "success"
         ];
 
+        // Function to pick a random category from the list
         function pickRandomCategory() {
             const randomIndex = Math.floor(Math.random() * categories.length);
             return categories[randomIndex];
@@ -61,6 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         const category = pickRandomCategory();
 
+        // Fetch a quote from the API
         $.ajax({
             method: 'GET',
             url: 'https://api.api-ninjas.com/v1/quotes?category=' + category,
@@ -77,13 +85,16 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // Fetch and display a quote on page load
     fetchAndDisplayQuote();
 
+    // Event listener for the "Generate Quote" button
     $('#generateQuoteButton').click(function(event) {
         event.preventDefault();
         fetchAndDisplayQuote();
     });
 
+    // Event listener for the "About the Developer" link
     $('#aboutDeveloperLink').click(function(event) {
         event.preventDefault();
         window.location.href = 'https://github.com/BodhiOng';
