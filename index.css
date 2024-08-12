@@ -21,10 +21,10 @@ body, html {
     width: 100%;
 }
 
-/* Specific header styling */
-.header {
-    height: auto;
-    font-size: 2.5rem;
+/* Specific header text styling */
+.header-text {
+    font-size: 2rem;
+    padding-bottom: 2px;
 }
 
 /* Specific footer styling */
@@ -101,49 +101,32 @@ body, html {
 }
 
 /* Responsive text overlay adjustments */
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
     .text-overlay {
         font-size: 0.875rem; 
         padding: 0.5rem;
     }
 
     .footer {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
         text-align: center;
     }
-}
 
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .text-overlay {
-        font-size: 1rem;
-        padding: 0.75rem;
+    .link-light {
+        display: none;
     }
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) 
-{
-    .text-overlay {
-        font-size: 1.25rem;
-        padding: 1rem;
-    }
-}
-
-@media (min-width: 992px) {
-    .text-overlay {
-        font-size: 1.5rem;
-        padding: 1.25rem;
-    }
-}
-
-@media (max-width: 375px) {
+@media (max-width: 480px) {
     .text-overlay {
         font-size: 0.75rem; 
         padding: 0.5rem;
     }
 
     .footer {
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
         text-align: center;
     }
